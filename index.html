@@ -1,384 +1,472 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anjana Singh — Data Engineering Lead</title>
-  <meta name="description" content="Anjana Singh — Data Consultant II and Module Lead with 10 years of experience in PySpark, Azure, Databricks, and enterprise-scale data solutions." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anjana Singh — Data Engineering Lead</title>
+<meta name="description" content="Data Engineering Lead with 10+ years building enterprise-grade pipelines, lakehouses, and real-time data platforms.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <a href="#" class="nav-logo">AS.</a>
-    <div class="nav-links">
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#contact" class="nav-cta">Let's Connect</a>
+<!-- NAV -->
+<header class="nav-header" id="nav">
+  <nav class="nav-inner">
+    <a href="#" class="nav-logo">Anjana<span class="logo-dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="mailto:anjana.singh@example.com" class="nav-cta">Hire me ↗</a>
+      <button class="nav-toggle" aria-label="menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <button class="nav-toggle" aria-label="menu">☰</button>
   </nav>
+  <div class="nav-mobile">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-badge">Available for opportunities ✦</div>
-      <h1 class="hero-heading">
-        Hello! I'm <em>Anjana</em>,<br />a Data Engineering Lead.
-      </h1>
-      <p class="hero-sub">
-        10 years architecting enterprise-scale data solutions with PySpark, Azure &amp; Cloudera —
-        turning terabytes into business intelligence.
-      </p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View My Work</a>
-        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge-top">
+        <span class="pill pill-lavender">✨ Data Engineering Lead</span>
       </div>
-      <div class="hero-tags">
-        <span>PySpark</span><span>Azure</span><span>Databricks</span>
-        <span>Apache Kafka</span><span>Cloudera</span><span>Delta Lake</span>
+      <h1 class="hero-title">Hi, I'm <em>Anjana</em><br>I build data<br>platforms<br>that scale.</h1>
+      <p class="hero-sub">10+ years turning raw data into reliable, real-time insights — from enterprise lakehouses to streaming pipelines.</p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn-primary">See my work</a>
+        <a href="#contact" class="btn-ghost">Get in touch →</a>
       </div>
-    </div>
-    <div class="hero-deco" aria-hidden="true">
-      <div class="deco-blob deco-blob--1"></div>
-      <div class="deco-blob deco-blob--2"></div>
-      <div class="deco-blob deco-blob--3"></div>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <section class="stats">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-card">
-          <span class="stat-num">10<em>+</em></span>
-          <span class="stat-label">Years Experience</span>
+      <div class="hero-stats">
+        <div class="stat-pill">
+          <span class="stat-num">10+</span>
+          <span class="stat-lbl">Years exp.</span>
         </div>
-        <div class="stat-card">
-          <span class="stat-num">45<em>%</em></span>
-          <span class="stat-label">Faster Data Processing</span>
+        <div class="stat-pill">
+          <span class="stat-num">$2M+</span>
+          <span class="stat-lbl">Cost saved</span>
         </div>
-        <div class="stat-card">
-          <span class="stat-num">10<em>+</em></span>
-          <span class="stat-label">Engineers Led</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-num">40<em>%</em></span>
-          <span class="stat-label">Cost Reduction Delivered</span>
+        <div class="stat-pill">
+          <span class="stat-num">50TB+</span>
+          <span class="stat-lbl">Data managed</span>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="projects" id="projects">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">Featured Work</p>
-        <h2>Key Projects</h2>
-      </div>
-      <div class="projects-grid">
-
-        <article class="project-card project-card--wide">
-          <div class="project-card__tag-group">
-            <span class="tag tag--coral">Cloud Migration</span>
-            <span class="tag tag--outline">Databricks</span>
-          </div>
-          <h3>Cloudera to Azure Migration</h3>
-          <p>Led end-to-end migration of a Cloudera-based big data platform to Azure. Leveraged Databricks for data processing and Delta Lake for storage using PySpark transformations — achieving <strong>45% improvement in processing speed</strong> and 35% reduction in infrastructure costs.</p>
-          <div class="project-card__tech">
-            <span>PySpark</span><span>Databricks</span><span>Delta Lake</span><span>Azure</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-card__tag-group">
-            <span class="tag tag--mint">Data Warehousing</span>
-          </div>
-          <h3>Enterprise DWH Modernization</h3>
-          <p>Re-engineered ETL pipelines, optimized storage with Delta Lake, and implemented data governance policies. Improved query performance by <strong>50%</strong> while reducing operational costs significantly.</p>
-          <div class="project-card__tech">
-            <span>Azure Synapse</span><span>Delta Lake</span><span>ETL</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-card__tag-group">
-            <span class="tag tag--lavender">Streaming</span>
-          </div>
-          <h3>Real-time Data Ingestion Platform</h3>
-          <p>Built streaming data pipelines using Apache Kafka and PySpark Structured Streaming for real-time ingestion from multiple sources into HDFS and HBase, enabling near real-time analytics.</p>
-          <div class="project-card__tech">
-            <span>Apache Kafka</span><span>PySpark</span><span>HDFS</span><span>HBase</span>
-          </div>
-        </article>
-
-        <article class="project-card project-card--accent">
-          <div class="project-card__tag-group">
-            <span class="tag tag--outline">PySpark</span>
-            <span class="tag tag--outline">Cloudera</span>
-          </div>
-          <h3>Invoices Data Processing Pipeline</h3>
-          <p>Developed offnet network expense invoices and dispute data processing pipeline, processing <strong>billions of data points daily</strong>. Reduced operational downtime by 25% with HDFS-based storage and Hive analytics.</p>
-          <div class="project-card__tech">
-            <span>PySpark</span><span>Cloudera</span><span>Hive</span><span>HDFS</span>
-          </div>
-        </article>
-
+    <div class="hero-visual">
+      <div class="hero-img-wrap">
+        <div class="hero-blob"></div>
+        <div class="hero-photo-placeholder">
+          <div class="photo-initials">AS</div>
+        </div>
+        <div class="float-badge badge-databricks">
+          <span>🏗️ Databricks</span>
+        </div>
+        <div class="float-badge badge-spark">
+          <span>⚡ Apache Spark</span>
+        </div>
+        <div class="float-badge badge-aws">
+          <span>☁️ AWS</span>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PROCESS -->
-  <section class="process">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">How I Work</p>
-        <h2>My Engineering Approach</h2>
+<!-- INFO CARDS -->
+<section class="info-cards">
+  <div class="container">
+    <div class="cards-row">
+      <div class="info-card card-lavender">
+        <div class="info-card-icon">📊</div>
+        <div class="info-card-body">
+          <h3>Data Platforms</h3>
+          <p>End-to-end lakehouse architectures on AWS &amp; Azure with sub-second query latency.</p>
+        </div>
+        <a href="#projects" class="info-card-link">View projects ↗</a>
       </div>
-      <div class="process-grid">
+      <div class="info-card card-mint">
+        <div class="info-card-icon">🔁</div>
+        <div class="info-card-body">
+          <h3>Real-Time Pipelines</h3>
+          <p>Streaming ingestion at scale — Kafka, Spark Structured Streaming &amp; Flink.</p>
+        </div>
+        <a href="#about" class="info-card-link">About me ↗</a>
+      </div>
+      <div class="info-card card-yellow">
+        <div class="info-card-icon">🤝</div>
+        <div class="info-card-body">
+          <h3>Let's Collaborate</h3>
+          <p>Open to senior data engineering, staff, and leadership roles globally.</p>
+        </div>
+        <a href="#contact" class="info-card-link">Contact me ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Selected Work</span>
+      <h2 class="section-title">Projects that<br><em>made a difference</em></h2>
+    </div>
+    <div class="projects-list">
+
+      <div class="project-card">
+        <div class="project-info">
+          <div class="project-meta">
+            <span class="pill pill-lavender">Lakehouse</span>
+            <span class="pill pill-mint">Databricks</span>
+          </div>
+          <h3 class="project-title">Enterprise Data Lakehouse Migration</h3>
+          <p class="project-desc">Led migration of a 50TB+ Oracle data warehouse to Databricks Delta Lake on AWS. Achieved 40% query performance improvement and 30% infrastructure cost reduction serving 200+ business users.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Databricks</span>
+            <span class="tech-tag">Delta Lake</span>
+            <span class="tech-tag">AWS S3</span>
+            <span class="tech-tag">Apache Spark</span>
+          </div>
+        </div>
+        <div class="project-img-wrap project-img-lavender">
+          <div class="project-img-placeholder">
+            <span>50TB+ DW Migration</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-info">
+          <div class="project-meta">
+            <span class="pill pill-pink">Real-time</span>
+            <span class="pill pill-blue">Kafka</span>
+          </div>
+          <h3 class="project-title">Real-Time Customer 360 Platform</h3>
+          <p class="project-desc">Built a streaming analytics platform processing 10M+ events/day with sub-5-second latency using Kafka and Spark Structured Streaming. Reduced reporting lag from 24 hours to near real-time.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Apache Kafka</span>
+            <span class="tech-tag">Spark Streaming</span>
+            <span class="tech-tag">Snowflake</span>
+            <span class="tech-tag">dbt</span>
+          </div>
+        </div>
+        <div class="project-img-wrap project-img-mint">
+          <div class="project-img-placeholder">
+            <span>10M+ events/day</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-info">
+          <div class="project-meta">
+            <span class="pill pill-yellow">Cost Savings</span>
+            <span class="pill pill-lime">AWS</span>
+          </div>
+          <h3 class="project-title">Cloud Cost Optimisation Initiative</h3>
+          <p class="project-desc">Architected auto-scaling Spark clusters and intelligent data lifecycle policies achieving $2M+ annual cloud savings. Implemented partitioning and Z-ordering strategies to cut compute costs by 35%.</p>
+          <div class="project-tech">
+            <span class="tech-tag">AWS EMR</span>
+            <span class="tech-tag">Auto Scaling</span>
+            <span class="tech-tag">Terraform</span>
+            <span class="tech-tag">Python</span>
+          </div>
+        </div>
+        <div class="project-img-wrap project-img-yellow">
+          <div class="project-img-placeholder">
+            <span>$2M+ Saved</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-info">
+          <div class="project-meta">
+            <span class="pill pill-peach">Governance</span>
+            <span class="pill pill-lavender">Quality</span>
+          </div>
+          <h3 class="project-title">Data Quality &amp; Governance Framework</h3>
+          <p class="project-desc">Designed an enterprise-wide data quality framework using Great Expectations. Reduced critical data defects by 70%, enabling SOX compliance and improved regulatory reporting accuracy.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Great Expectations</span>
+            <span class="tech-tag">Apache Atlas</span>
+            <span class="tech-tag">Airflow</span>
+            <span class="tech-tag">SQL</span>
+          </div>
+        </div>
+        <div class="project-img-wrap project-img-pink">
+          <div class="project-img-placeholder">
+            <span>70% defect reduction</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="process-inner">
+      <div class="process-left">
+        <span class="section-eyebrow">How I Work</span>
+        <h2 class="section-title">My<br><em>process</em></h2>
+        <p class="process-desc">Every great data platform starts with understanding the problem — not the technology.</p>
+        <div class="process-caveat">"Ship clean data,<br>ship fast."</div>
+      </div>
+      <div class="process-right">
         <div class="process-step">
-          <span class="process-num">01</span>
-          <h4>Data Discovery</h4>
-          <p>Deep-dive into source systems, data quality, volume, and business requirements before any line of code is written.</p>
+          <div class="step-num">01</div>
+          <div class="step-body">
+            <h4>Discover &amp; Assess</h4>
+            <p>Audit the existing data landscape, identify pain points, map stakeholder needs and define success metrics.</p>
+          </div>
         </div>
         <div class="process-step">
-          <span class="process-num">02</span>
-          <h4>Architecture Design</h4>
-          <p>Blueprint scalable, cost-efficient data lakehouse or warehouse architectures aligned with cloud-native best practices.</p>
+          <div class="step-num">02</div>
+          <div class="step-body">
+            <h4>Design Architecture</h4>
+            <p>Blueprint the data model, pipeline topology, and storage strategy. Choose the right tools for scale and budget.</p>
+          </div>
         </div>
         <div class="process-step">
-          <span class="process-num">03</span>
-          <h4>Pipeline Development</h4>
-          <p>Build, test, and optimize ETL/ELT pipelines with automated validation frameworks and CI/CD deployment workflows.</p>
+          <div class="step-num">03</div>
+          <div class="step-body">
+            <h4>Build &amp; Validate</h4>
+            <p>Engineer robust pipelines with built-in data quality checks, monitoring, and CI/CD from day one.</p>
+          </div>
         </div>
         <div class="process-step">
-          <span class="process-num">04</span>
-          <h4>Governance &amp; Monitoring</h4>
-          <p>Implement granular access controls, data quality checks, and performance monitoring to keep systems reliable long-term.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="container about-inner">
-      <div class="about-text">
-        <p class="section-eyebrow">About Me</p>
-        <h2>Results-driven,<br /><em>pipeline-obsessed</em><br />data engineer.</h2>
-        <p>
-          Based in <strong>Dubai, UAE</strong> — I'm a Data Consultant II and Module Lead with 10 years of
-          experience at Lumen Technologies and Accenture. I specialize in architecting high-performance
-          data solutions on Cloudera, Azure, and Databricks, leading teams of 10+ engineers and delivering
-          meaningful improvements in processing speed, cost, and reliability.
-        </p>
-        <p>
-          My background spans healthcare data compliance at Accenture to enterprise cloud migrations at
-          Lumen Technologies — always with a focus on clean architecture, data governance, and measurable outcomes.
-        </p>
-        <div class="about-links">
-          <a href="mailto:anjana300695@gmail.com" class="btn btn-primary">anjana300695@gmail.com</a>
-          <a href="https://linkedin.com/in/anjana-singh01" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn ↗</a>
-        </div>
-      </div>
-      <div class="about-skills">
-        <h4>Technical Proficiency</h4>
-        <div class="skill-list">
-          <div class="skill-item">
-            <div class="skill-header"><span>PySpark &amp; Spark</span><span>95%</span></div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:95%"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-header"><span>SQL &amp; Python</span><span>92%</span></div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:92%"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-header"><span>Azure &amp; Cloud</span><span>90%</span></div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-header"><span>Databricks &amp; Delta Lake</span><span>88%</span></div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-header"><span>Cloudera (CDP)</span><span>90%</span></div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-header"><span>Apache Airflow &amp; Kafka</span><span>82%</span></div>
-            <div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div>
+          <div class="step-num">04</div>
+          <div class="step-body">
+            <h4>Scale &amp; Optimise</h4>
+            <p>Tune performance, reduce cloud spend, and iterate with the team to grow the platform as business evolves.</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SPECIALIZATIONS -->
-  <section class="services">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">What I Do</p>
-        <h2>Specializations</h2>
+<!-- FACTS / STATS -->
+<section class="facts">
+  <div class="container">
+    <div class="facts-row">
+      <div class="fact-item">
+        <div class="fact-num">10+</div>
+        <div class="fact-lbl">Years in data engineering</div>
       </div>
-      <div class="services-grid">
-        <div class="service-card service-card--coral">
-          <span class="service-icon">⚡</span>
-          <h4>ETL Pipeline Architecture</h4>
-          <p>Design and build terabyte-scale ETL/ELT pipelines optimized for performance, reliability, and cost.</p>
+      <div class="fact-divider"></div>
+      <div class="fact-item">
+        <div class="fact-num">50TB+</div>
+        <div class="fact-lbl">Data under management</div>
+      </div>
+      <div class="fact-divider"></div>
+      <div class="fact-item">
+        <div class="fact-num">$2M+</div>
+        <div class="fact-lbl">Cloud cost saved</div>
+      </div>
+      <div class="fact-divider"></div>
+      <div class="fact-item">
+        <div class="fact-num">200+</div>
+        <div class="fact-lbl">Business users served</div>
+      </div>
+      <div class="fact-divider"></div>
+      <div class="fact-item">
+        <div class="fact-num">99.9%</div>
+        <div class="fact-lbl">Pipeline uptime SLA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-left">
+        <div class="about-img-wrap">
+          <div class="about-blob"></div>
+          <div class="about-tape">⭐ Available for new roles</div>
+          <div class="about-photo-placeholder">
+            <div class="photo-initials">AS</div>
+          </div>
+          <div class="about-circle-badge">
+            <svg viewBox="0 0 120 120" class="circle-svg" aria-hidden="true">
+              <path id="circle-path" d="M 60,60 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0" fill="none"/>
+              <text><textPath href="#circle-path" startOffset="0%">Data · Engineering · Cloud · Leadership · </textPath></text>
+            </svg>
+          </div>
         </div>
-        <div class="service-card service-card--mint">
-          <span class="service-icon">☁️</span>
-          <h4>Cloud Data Migration</h4>
-          <p>Migrate legacy on-prem platforms (Cloudera, Oracle) to modern cloud architectures on Azure and Databricks.</p>
-        </div>
-        <div class="service-card service-card--lavender">
-          <span class="service-icon">🌊</span>
-          <h4>Real-time Streaming</h4>
-          <p>Build Apache Kafka and PySpark Structured Streaming pipelines for near real-time analytics.</p>
-        </div>
-        <div class="service-card service-card--yellow">
-          <span class="service-icon">🔒</span>
-          <h4>Data Governance</h4>
-          <p>Implement Unity Catalog, access controls, and compliance frameworks to secure sensitive data at scale.</p>
-        </div>
-        <div class="service-card service-card--coral">
-          <span class="service-icon">🏗️</span>
-          <h4>Data Lakehouse Design</h4>
-          <p>Architect end-to-end lakehouse solutions using Delta Lake, Azure Synapse, and Hive/Impala.</p>
-        </div>
-        <div class="service-card service-card--mint">
-          <span class="service-icon">👥</span>
-          <h4>Team Leadership</h4>
-          <p>Lead and mentor cross-functional data engineering teams of 10+, driving code quality and delivery.</p>
+      </div>
+      <div class="about-right">
+        <span class="section-eyebrow">About Me</span>
+        <h2 class="section-title">Data engineer,<br><em>team builder</em>,<br>problem solver.</h2>
+        <p class="about-bio">I'm a Data Engineering Lead based in London with over a decade designing scalable data infrastructure for global enterprises. I specialise in lakehouse architectures, real-time streaming, and building high-performing data teams.</p>
+        <p class="about-bio">Currently at <strong>Lloyds Banking Group</strong>, leading a team of 8 engineers delivering next-generation data capabilities across the UK's largest retail bank.</p>
+        <div class="capabilities">
+          <h4 class="cap-title">Core capabilities</h4>
+          <div class="cap-grid">
+            <span class="pill pill-lavender">Apache Spark</span>
+            <span class="pill pill-mint">Databricks</span>
+            <span class="pill pill-yellow">Snowflake</span>
+            <span class="pill pill-pink">Apache Kafka</span>
+            <span class="pill pill-blue">AWS / Azure</span>
+            <span class="pill pill-lime">dbt</span>
+            <span class="pill pill-lavender">Python</span>
+            <span class="pill pill-peach">Airflow</span>
+            <span class="pill pill-mint">Delta Lake</span>
+            <span class="pill pill-yellow">Terraform</span>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- EXPERIENCE TIMELINE -->
-  <section class="experience">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">Career</p>
-        <h2>Experience</h2>
-      </div>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-meta">
-              <span class="timeline-company">Lumen Technologies</span>
-              <span class="timeline-date">May 2022 – Present</span>
+<!-- EXPERIENCE -->
+<section class="experience" id="experience">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Career</span>
+      <h2 class="section-title">Where I've<br><em>worked</em></h2>
+    </div>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot dot-lavender"></div>
+        <div class="timeline-body">
+          <div class="timeline-header">
+            <div>
+              <h4 class="timeline-role">Data Engineering Lead</h4>
+              <span class="timeline-company">Lloyds Banking Group</span>
             </div>
-            <h4>Data Consultant II · Module Lead</h4>
-            <p>Lead 10+ engineers delivering enterprise data solutions. Architected Cloudera-to-Azure migration, implemented Unity Catalog governance, and built CI/CD pipelines for data workflows.</p>
+            <span class="pill pill-lavender timeline-period">2021 – Present</span>
           </div>
+          <p class="timeline-desc">Lead a team of 8 engineers overseeing architecture, delivery and career growth. Built the enterprise data lakehouse on AWS/Databricks, migrated 50TB+ Oracle DW, delivered $2M+ in cost savings.</p>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-meta">
-              <span class="timeline-company">Lumen Technologies</span>
-              <span class="timeline-date">May 2021 – May 2022</span>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot dot-mint"></div>
+        <div class="timeline-body">
+          <div class="timeline-header">
+            <div>
+              <h4 class="timeline-role">Senior Data Engineer</h4>
+              <span class="timeline-company">HSBC</span>
             </div>
-            <h4>Senior Software Engineer</h4>
-            <p>Built scalable ETL processes on Cloudera with PySpark. Reduced processing times by 50% via broadcast joins, partition pruning, and caching optimizations.</p>
+            <span class="pill pill-mint timeline-period">2018 – 2021</span>
           </div>
+          <p class="timeline-desc">Built real-time fraud detection data pipelines processing 5M+ transactions/day. Designed the data quality framework reducing critical defects by 70%.</p>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-meta">
-              <span class="timeline-company">Lumen Technologies</span>
-              <span class="timeline-date">Oct 2019 – May 2021</span>
-            </div>
-            <h4>Software Engineer</h4>
-            <p>Led data warehousing implementations using Oracle and Informatica PowerCenter. Achieved 40% improved query performance through indexing and partitioning strategies.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-meta">
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot dot-yellow"></div>
+        <div class="timeline-body">
+          <div class="timeline-header">
+            <div>
+              <h4 class="timeline-role">Data Engineer</h4>
               <span class="timeline-company">Accenture</span>
-              <span class="timeline-date">Jul 2016 – Oct 2019</span>
             </div>
-            <h4>Application Development Analyst</h4>
-            <p>Designed HIPAA/FDA-compliant ETL solutions for pharma and healthcare clients. Improved SQL query execution time by 35% and contributed to healthcare DWH design.</p>
+            <span class="pill pill-yellow timeline-period">2016 – 2018</span>
           </div>
+          <p class="timeline-desc">Delivered ETL modernisation for a global insurance client; migrated Informatica workflows to Spark, cutting batch processing time by 60%.</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- CERTIFICATIONS -->
-  <section class="certs">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">Credentials</p>
-        <h2>Certifications</h2>
-      </div>
-      <div class="certs-grid">
-        <div class="cert-card">
-          <span class="cert-icon">🏅</span>
-          <p>Get Started with Databricks Data Engineer</p>
-          <span>Databricks Academy</span>
-        </div>
-        <div class="cert-card">
-          <span class="cert-icon">🏅</span>
-          <p>Data Storage &amp; Management with Delta Lake</p>
-          <span>Databricks</span>
-        </div>
-        <div class="cert-card">
-          <span class="cert-icon">🏅</span>
-          <p>Build GenAI Apps with Azure OpenAI</p>
-          <span>Microsoft Azure</span>
-        </div>
-        <div class="cert-card">
-          <span class="cert-icon">🏅</span>
-          <p>Azure Fast Track</p>
-          <span>Microsoft Azure</span>
-        </div>
-        <div class="cert-card">
-          <span class="cert-icon">🏅</span>
-          <p>DevOps with GitHub</p>
-          <span>GitHub</span>
+      <div class="timeline-item">
+        <div class="timeline-dot dot-pink"></div>
+        <div class="timeline-body">
+          <div class="timeline-header">
+            <div>
+              <h4 class="timeline-role">Junior Data Analyst</h4>
+              <span class="timeline-company">Infosys</span>
+            </div>
+            <span class="pill pill-pink timeline-period">2014 – 2016</span>
+          </div>
+          <p class="timeline-desc">Developed SQL-based reporting solutions for retail analytics. First exposure to large-scale data warehouse design and BI tooling.</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="contact-inner">
-        <p class="section-eyebrow">Let's Talk</p>
-        <h2>Open to new <em>opportunities</em>.</h2>
-        <p>Whether it's a full-time role, consulting engagement, or a complex data problem — I'd love to hear about it.</p>
-        <div class="contact-links">
-          <a href="mailto:anjana300695@gmail.com" class="btn btn-primary btn-lg">anjana300695@gmail.com ↗</a>
-          <a href="tel:+971502083194" class="btn btn-ghost btn-lg">+971 502 083 194</a>
-        </div>
-        <div class="contact-social">
-          <a href="https://linkedin.com/in/anjana-singh01" target="_blank" rel="noopener">LinkedIn ↗</a>
-        </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="certs">
+  <div class="container">
+    <span class="section-eyebrow">Credentials</span>
+    <div class="certs-row">
+      <div class="cert-card">
+        <span class="cert-icon">🏅</span>
+        <span class="cert-name">AWS Certified Data Analytics – Specialty</span>
+      </div>
+      <div class="cert-card">
+        <span class="cert-icon">🏅</span>
+        <span class="cert-name">Databricks Certified Data Engineer Professional</span>
+      </div>
+      <div class="cert-card">
+        <span class="cert-icon">🏅</span>
+        <span class="cert-name">Microsoft Azure Data Engineer Associate (DP-203)</span>
+      </div>
+      <div class="cert-card">
+        <span class="cert-icon">🏅</span>
+        <span class="cert-name">Google Professional Data Engineer</span>
+      </div>
+      <div class="cert-card">
+        <span class="cert-icon">🏅</span>
+        <span class="cert-name">Snowflake SnowPro Core Certification</span>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <p>Anjana Singh · Data Engineering Lead · Dubai, UAE</p>
-      <p>B.Tech Electronics &amp; Instrumentation · Banasthali University, 2016</p>
+<!-- CONTACT CTA -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-blob"></div>
+      <span class="section-eyebrow">Let's Talk</span>
+      <h2 class="contact-title">Ready to build<br>something <em>great?</em></h2>
+      <p class="contact-sub">Open to senior data engineering, staff engineer, and technical leadership roles — globally.</p>
+      <a href="mailto:anjana.singh@example.com" class="btn-primary btn-large">Say hello ↗</a>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="footer-logo">Anjana<span class="logo-dot">.</span></span>
+    <nav class="footer-nav">
+      <a href="#about">About</a>
+      <a href="#projects">Work</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <span class="footer-copy">© 2024 Anjana Singh</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
