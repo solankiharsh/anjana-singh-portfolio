@@ -177,7 +177,16 @@ a  { text-decoration: none; color: inherit; }
   box-shadow: 0 4px 16px rgba(0,0,0,.1);
   background: #d0d0f0;
 }
-.hero-photo-inline img { width:100%; height:100%; object-fit:cover; object-position: center top; }
+/* cycling slides — each absolutely fills the circle */
+.hero-photo-slide {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity .7s ease;
+}
+.hero-photo-slide.active { opacity: 1; }
 .photo-fb {
   display: none; position: absolute; inset: 0;
   align-items: center; justify-content: center;
@@ -206,22 +215,21 @@ a  { text-decoration: none; color: inherit; }
 }
 .cards-deck {
   position: relative;
-  width: 860px; height: 300px;
+  width: 1060px; max-width: 100%; height: 300px;
 }
 
-/* base card */
+/* base card — JS drives the transform, no CSS transition on transform */
 .icard {
   position: absolute; bottom: 0;
-  width: 340px;
+  width: 320px;
   background: var(--white);
   border: 1.5px solid rgba(0,0,0,.1);
   border-radius: var(--r-card);
   padding: 32px 28px 24px;
   display: flex; flex-direction: column; gap: 10px;
   transform-origin: bottom center;
-  /* start stacked — all at center */
   left: 50%; transform: translateX(-50%);
-  transition: transform .7s cubic-bezier(.34,1.4,.64,1), opacity .4s ease;
+  will-change: transform;
 }
 .icard h3 { font-size: 19px; font-weight: 800; }
 .icard p  { font-size: 13px; color: #777; line-height: 1.6; flex: 1; }
@@ -239,15 +247,10 @@ a  { text-decoration: none; color: inherit; }
 .icard-btn-teal { background: var(--mint); border-color: var(--mint); }
 .icard-btn-teal:hover { opacity: .85; }
 
-/* stacking offsets — 2 behind visible slightly */
-.icard-1 { z-index: 1; transform: translateX(-50%) rotate(-4deg) translateY(8px); }
-.icard-2 { z-index: 2; transform: translateX(-50%) rotate(2deg) translateY(4px); }
-.icard-3 { z-index: 3; transform: translateX(-50%) rotate(0deg); }
-
-/* spread state */
-.cards-deck.spread .icard-1 { transform: translateX(-145%) rotate(0deg) translateY(0); }
-.cards-deck.spread .icard-2 { transform: translateX(-50%) rotate(0deg) translateY(0); }
-.cards-deck.spread .icard-3 { transform: translateX(45%) rotate(0deg) translateY(0); }
+/* initial z-index stacking */
+.icard-1 { z-index: 1; }
+.icard-2 { z-index: 2; }
+.icard-3 { z-index: 3; }
 
 /* =====================================================
    PROJECTS

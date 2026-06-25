@@ -2,10 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "portfolio",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-s", ".", "-p", "5173"],
-      "port": 5173
+      "name": "anjana-portfolio",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8765"],
+      "port": 8765
     }
   ]
 }

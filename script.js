@@ -27,13 +27,48 @@ const revealIO = new IntersectionObserver(
 );
 document.querySelectorAll('.reveal').forEach(el => revealIO.observe(el));
 
-// spread info cards when section scrolls into view
-const spreadIO = new IntersectionObserver(
-  ([e]) => { if (e.isIntersecting) { e.target.classList.add('spread'); spreadIO.unobserve(e.target); } },
-  { threshold: 0.4 }
-);
-const cardsDeck = document.querySelector('.cards-deck');
-if (cardsDeck) spreadIO.observe(cardsDeck);
+// scroll-driven card spread
+const deck = document.querySelector('.cards-deck');
+const c1 = deck?.querySelector('.icard-1');
+const c2 = deck?.querySelector('.icard-2');
+const c3 = deck?.querySelector('.icard-3');
+
+function applyCardSpread(p) {
+  if (!deck) return;
+  // ease: accelerate in, decelerate out
+  const e = p < 0.5 ? 2*p*p : 1 - Math.pow(-2*p+2, 2)/2;
+  const spread = 340; // px each card moves from center
+  c1.style.transform = `translateX(calc(-50% + ${-spread * e}px)) rotate(${-4*(1-e)}deg) translateY(${8*(1-e)}px)`;
+  c2.style.transform = `translateX(-50%) rotate(${2*(1-e)}deg) translateY(${4*(1-e)}px)`;
+  c3.style.transform = `translateX(calc(-50% + ${spread * e}px)) rotate(0deg)`;
+  // bring side cards forward once spread > half
+  c1.style.zIndex = e > 0.5 ? 3 : 1;
+  c3.style.zIndex = e > 0.5 ? 3 : 1;
+}
+
+function onScroll() {
+  if (!deck) return;
+  const rect = deck.getBoundingClientRect();
+  const vh = window.innerHeight;
+  // 0 when deck bottom enters viewport, 1 when deck top is at 40% vh
+  const p = Math.max(0, Math.min(1, (vh - rect.top) / (vh * 0.7)));
+  applyCardSpread(p);
+}
+
+applyCardSpread(0); // initial stacked state
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// cycling hero photos
+const slides = document.querySelectorAll('.hero-photo-slide');
+if (slides.length > 1) {
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 2500);
+}
 
 // skill bars
 const skillIO = new IntersectionObserver(
