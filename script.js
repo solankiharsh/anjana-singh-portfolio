@@ -10,8 +10,8 @@ navMobile?.querySelectorAll('a').forEach(a =>
 document.querySelectorAll('img').forEach(img => {
   img.addEventListener('error', () => {
     const fallback = img.nextElementSibling;
-    if (fallback?.classList.contains('photo-fallback') ||
-        fallback?.classList.contains('about-photo-fallback')) {
+    if (fallback?.classList.contains('photo-fb') ||
+        fallback?.classList.contains('about-photo-fb')) {
       img.style.display = 'none';
       fallback.style.display = 'flex';
     }
@@ -27,13 +27,13 @@ const revealIO = new IntersectionObserver(
 );
 document.querySelectorAll('.reveal').forEach(el => revealIO.observe(el));
 
-// fan out info cards when section scrolls into view
-const fanIO = new IntersectionObserver(
-  ([e]) => { if (e.isIntersecting) { e.target.classList.add('fanned'); fanIO.unobserve(e.target); } },
+// spread info cards when section scrolls into view
+const spreadIO = new IntersectionObserver(
+  ([e]) => { if (e.isIntersecting) { e.target.classList.add('spread'); spreadIO.unobserve(e.target); } },
   { threshold: 0.4 }
 );
-const cardsFan = document.querySelector('.cards-fan');
-if (cardsFan) fanIO.observe(cardsFan);
+const cardsDeck = document.querySelector('.cards-deck');
+if (cardsDeck) spreadIO.observe(cardsDeck);
 
 // skill bars
 const skillIO = new IntersectionObserver(
@@ -70,3 +70,17 @@ const statIO = new IntersectionObserver(
   { threshold: 0.5 }
 );
 document.querySelectorAll('.stat-num[data-val]').forEach(el => statIO.observe(el));
+
+// stagger cap-tag pills into view
+const capsIO = new IntersectionObserver(
+  ([e]) => {
+    if (!e.isIntersecting) return;
+    e.target.querySelectorAll('.cap-tag').forEach((tag, i) => {
+      setTimeout(() => tag.classList.add('visible'), i * 60);
+    });
+    capsIO.unobserve(e.target);
+  },
+  { threshold: 0.2 }
+);
+const capsRow = document.querySelector('.caps-row');
+if (capsRow) capsIO.observe(capsRow);
