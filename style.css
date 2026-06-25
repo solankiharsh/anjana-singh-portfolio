@@ -76,6 +76,7 @@ a  { text-decoration: none; color: inherit; }
 .hero-wrap {
   background: var(--lavender);
   padding: 24px 40px 0;
+  position: relative;
 }
 
 /* =====================================================
@@ -148,8 +149,8 @@ a  { text-decoration: none; color: inherit; }
   font-size: 13px; font-weight: 700; color: var(--ink);
   white-space: nowrap;
 }
-.sticker-tl { top: 26%; left: 0; transform: rotate(-6deg); }
-.sticker-tr { top: 28%; right: 0; transform: rotate(5deg); }
+.sticker-tl { top: 42%; left: 3%; transform: rotate(-6deg); }
+.sticker-tr { top: 46%; right: 3%; transform: rotate(5deg); }
 
 /* decorative line-art floaters */
 .deco { position: absolute; pointer-events: none; }
@@ -198,6 +199,7 @@ a  { text-decoration: none; color: inherit; }
   font-size: clamp(15px, 1.5vw, 18px); color: rgba(29,29,29,.6);
   max-width: 560px; margin: 0 auto 36px; line-height: 1.7;
 }
+.hero-sub strong { color: var(--ink); font-weight: 700; }
 .hero-inner { position: relative; z-index: 1; }
 .hero-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
@@ -234,6 +236,13 @@ a  { text-decoration: none; color: inherit; }
 .icard h3 { font-size: 19px; font-weight: 800; }
 .icard p  { font-size: 13px; color: #777; line-height: 1.6; flex: 1; }
 .icard-icon { margin-bottom: 4px; }
+.icard-icon-wrap {
+  width: 58px; height: 58px; border-radius: 18px;
+  display: flex; align-items: center; justify-content: center;
+}
+.bg-lavender { background: #ebebff; }
+.bg-yellow   { background: #fff4cc; }
+.bg-mint     { background: #d2f5ec; }
 
 .icard-btn {
   display: inline-flex; align-items: center; justify-content: center;
@@ -271,7 +280,19 @@ a  { text-decoration: none; color: inherit; }
 }
 .section-center-sub strong { color: var(--ink); }
 
-.projects-list { display: flex; flex-direction: column; gap: 20px; }
+.projects-list { display: flex; flex-direction: column; gap: 0; }
+
+/* sticky card stacking — each card slides on top of the previous */
+.pcard-wrap {
+  position: sticky;
+  top: 88px;
+  padding-bottom: 24px;
+  background: var(--white);
+}
+.pcard-wrap:nth-child(1) { z-index: 1; }
+.pcard-wrap:nth-child(2) { z-index: 2; }
+.pcard-wrap:nth-child(3) { z-index: 3; }
+.pcard-wrap:nth-child(4) { z-index: 4; }
 
 /* project card — large rounded card, border */
 .pcard {
@@ -282,7 +303,7 @@ a  { text-decoration: none; color: inherit; }
   background: var(--white);
   transition: box-shadow .22s, transform .22s;
 }
-.pcard:hover { box-shadow: 0 8px 40px rgba(0,0,0,.1); transform: translateY(-2px); }
+.pcard:hover { box-shadow: 0 8px 40px rgba(0,0,0,.1); }
 
 .pcard-info {
   padding: 52px 44px;
@@ -353,6 +374,48 @@ a  { text-decoration: none; color: inherit; }
 .projects-cta p { font-size: 18px; color: #888; font-weight: 500; }
 
 /* =====================================================
+   VIEW PROJECT — hover rotating marquee ring
+===================================================== */
+.btn-vp {
+  position: relative;
+  display: inline-flex; align-items: center;
+  padding: 13px 26px;
+  border: 1.5px solid var(--ink); color: var(--ink);
+  border-radius: var(--r-pill); font-size: 14px; font-weight: 600;
+  transition: background .18s, color .18s;
+  overflow: visible;
+}
+.btn-vp:hover { background: var(--ink); color: var(--white); }
+
+.vp-ring {
+  position: absolute;
+  width: 116px; height: 116px;
+  border-radius: 50%;
+  background: var(--ink);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: transform .35s cubic-bezier(.34,1.3,.64,1), opacity .25s;
+  pointer-events: none;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 10;
+}
+.btn-vp:hover .vp-ring {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+.vp-ring-svg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  animation: vp-spin 7s linear infinite;
+}
+@keyframes vp-spin { to { transform: rotate(360deg); } }
+.vp-arrow {
+  color: white; font-size: 20px; line-height: 1;
+  position: relative; z-index: 1;
+}
+
+/* =====================================================
    TESTIMONIAL
 ===================================================== */
 .testimonial { padding: 80px 0; background: var(--white); }
@@ -382,7 +445,19 @@ a  { text-decoration: none; color: inherit; }
   font-weight: 800; line-height: 1.2; letter-spacing: -.03em; margin-bottom: 20px;
 }
 .process-desc { font-size: 15px; color: rgba(29,29,29,.6); line-height: 1.7; margin-bottom: 28px; }
-.process-right { display: flex; flex-direction: column; gap: 14px; }
+.process-right { display: block; }
+
+/* sticky step stacking inside process-right */
+.pstep-wrap {
+  position: sticky;
+  top: 104px;
+  padding-bottom: 16px;
+  background: var(--lavender);
+}
+.pstep-wrap:nth-child(1) { z-index: 1; }
+.pstep-wrap:nth-child(2) { z-index: 2; }
+.pstep-wrap:nth-child(3) { z-index: 3; }
+.pstep-wrap:nth-child(4) { z-index: 4; }
 
 /* colored process step cards */
 .pstep {

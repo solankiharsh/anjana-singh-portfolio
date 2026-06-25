@@ -15,6 +15,18 @@
 <!-- HERO (lavender bg wraps nav + hero) -->
 <div class="hero-wrap">
 
+  <!-- sticker badges — positioned relative to hero-wrap for wide spacing -->
+  <div class="sticker sticker-tl">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    <span>Data Engineering</span>
+    <svg width="28" height="14" viewBox="0 0 28 14" fill="none"><path d="M1 7 Q8 1 14 7 Q20 13 27 7" stroke="#c8c8c8" stroke-width="1.5" fill="none"/></svg>
+  </div>
+  <div class="sticker sticker-tr">
+    <span>☁️</span>
+    <span>Cloud Native</span>
+    <svg width="28" height="14" viewBox="0 0 28 14" fill="none"><path d="M1 7 Q8 13 14 7 Q20 1 27 7" stroke="#c8c8c8" stroke-width="1.5" fill="none"/></svg>
+  </div>
+
   <!-- NAV — floating white pill inside the lavender area -->
   <header class="nav-pill" id="nav">
     <a href="#" class="nav-logo">Anjana<span class="logo-dot">.</span></a>
@@ -49,18 +61,6 @@
 
   <!-- HERO CONTENT -->
   <section class="hero">
-    <!-- floating sticker badges -->
-    <div class="sticker sticker-tl">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-      <span>Data Engineering</span>
-      <svg width="28" height="14" viewBox="0 0 28 14" fill="none"><path d="M1 7 Q8 1 14 7 Q20 13 27 7" stroke="#c8c8c8" stroke-width="1.5" fill="none"/></svg>
-    </div>
-    <div class="sticker sticker-tr">
-      <span>☁️</span>
-      <span>Cloud Native</span>
-      <svg width="28" height="14" viewBox="0 0 28 14" fill="none"><path d="M1 7 Q8 13 14 7 Q20 1 27 7" stroke="#c8c8c8" stroke-width="1.5" fill="none"/></svg>
-    </div>
-
     <!-- decorative line-art icons -->
     <div class="deco deco-pen">
       <svg width="52" height="60" viewBox="0 0 52 60" fill="none" stroke="#a0a0c0" stroke-width="1.5">
@@ -90,7 +90,7 @@
           <span class="photo-fb">AS</span>
         </span>&nbsp;I'm Anjana,<br>a Data Engineering<br><em>Lead.</em>
       </h1>
-      <p class="hero-sub">I build pipelines, lakehouses, and real-time data platforms that power decisions at scale — 10+ years, enterprise-grade, always reliable.</p>
+      <p class="hero-sub">I build <strong>pipelines</strong>, <strong>lakehouses</strong>, and <strong>real-time data platforms</strong> that power decisions at scale — 10+ years, <strong>enterprise-grade</strong>, always reliable.</p>
       <div class="hero-ctas">
         <a href="#projects" class="btn-dark">See my work</a>
         <a href="#contact" class="btn-outline">Get in touch →</a>
@@ -104,7 +104,13 @@
       <div class="cards-deck" id="cardsDeck">
         <div class="icard icard-1">
           <div class="icard-icon">
-            <svg width="44" height="44" viewBox="0 0 44 44" fill="none"><rect x="4" y="8" width="36" height="28" rx="4" stroke="#1d1d1d" stroke-width="1.5"/><path d="M4 16h36" stroke="#1d1d1d" stroke-width="1.5"/><path d="M12 24h8M12 30h14" stroke="#1d1d1d" stroke-width="1.5" stroke-linecap="round"/><circle cx="30" cy="27" r="5" stroke="#1d1d1d" stroke-width="1.5"/></svg>
+            <div class="icard-icon-wrap bg-lavender">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                <ellipse cx="15" cy="8" rx="10" ry="4" fill="#8880e8"/>
+                <path d="M5 8v6c0 2.2 4.5 4 10 4s10-1.8 10-4V8" fill="#acacf0"/>
+                <path d="M5 14v6c0 2.2 4.5 4 10 4s10-1.8 10-4v-6" fill="#d4d4f8"/>
+              </svg>
+            </div>
           </div>
           <h3>My Portfolio</h3>
           <p>Explore selected data engineering projects and my approach to architecture.</p>
@@ -114,7 +120,15 @@
         </div>
         <div class="icard icard-2">
           <div class="icard-icon">
-            <svg width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="16" r="8" stroke="#1d1d1d" stroke-width="1.5"/><path d="M6 40c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="#1d1d1d" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <div class="icard-icon-wrap bg-yellow">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                <circle cx="15" cy="11" r="6" fill="#f9c847"/>
+                <path d="M4 28c0-6.08 4.92-11 11-11s11 4.92 11 11" fill="#fde9a0"/>
+                <circle cx="12.5" cy="10" r="1" fill="white"/>
+                <circle cx="17.5" cy="10" r="1" fill="white"/>
+                <path d="M12 13 Q15 15.5 18 13" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+            </div>
           </div>
           <h3>About Me</h3>
           <p>A closer look at my background, skills, and data engineering journey.</p>
@@ -124,7 +138,14 @@
         </div>
         <div class="icard icard-3">
           <div class="icard-icon">
-            <svg width="44" height="44" viewBox="0 0 44 44" fill="none"><rect x="4" y="8" width="36" height="28" rx="4" stroke="#1d1d1d" stroke-width="1.5"/><path d="M4 16h36M14 26l6 4 6-4" stroke="#1d1d1d" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <div class="icard-icon-wrap bg-mint">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                <rect x="3" y="8" width="24" height="17" rx="3" fill="#43c99e"/>
+                <path d="M3 12l12 7.5 12-7.5" fill="#2da882"/>
+                <circle cx="22" cy="22" r="5" fill="#fff4cc"/>
+                <path d="M20 22l1.5 1.5 3-3" stroke="#e6a000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
           </div>
           <h3>Contact Me</h3>
           <p>Let's work together to build your next-generation data platform.</p>
@@ -146,80 +167,88 @@
 
     <div class="projects-list">
 
-      <div class="pcard reveal">
-        <div class="pcard-info">
-          <div class="pcard-tags">LAKEHOUSE · DATABRICKS</div>
-          <h3 class="pcard-title">Enterprise Data Lakehouse Migration</h3>
-          <p class="pcard-desc">Led migration of a 50TB+ Oracle DW to Databricks Delta Lake on AWS. 40% query improvement, 30% cost reduction, 200+ business users served daily.</p>
-          <a href="#" class="btn-outline-sm">View Project</a>
-        </div>
-        <div class="pcard-img pcard-img-lavender">
-          <div class="pcard-screen">
-            <div class="mini-dash">
-              <div class="mini-dash-bar" style="--h:55%"></div>
-              <div class="mini-dash-bar" style="--h:80%"></div>
-              <div class="mini-dash-bar" style="--h:45%"></div>
-              <div class="mini-dash-bar" style="--h:90%"></div>
-              <div class="mini-dash-bar" style="--h:65%"></div>
-              <div class="mini-dash-bar" style="--h:75%"></div>
-            </div>
-            <div class="mini-label">50TB+ migrated · 40% faster queries</div>
+      <div class="pcard-wrap">
+        <div class="pcard reveal">
+          <div class="pcard-info">
+            <div class="pcard-tags">LAKEHOUSE · DATABRICKS</div>
+            <h3 class="pcard-title">Enterprise Data Lakehouse Migration</h3>
+            <p class="pcard-desc">Led migration of a 50TB+ Oracle DW to Databricks Delta Lake on AWS. 40% query improvement, 30% cost reduction, 200+ business users served daily.</p>
+            <a href="#" class="btn-vp">View Project<span class="vp-ring" aria-hidden="true"><svg class="vp-ring-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><defs><path id="arc1" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1-92,0"/></defs><text fill="white" font-size="10" font-weight="700" letter-spacing="2.5" font-family="Inter,sans-serif"><textPath href="#arc1">VIEW MORE · VIEW MORE · </textPath></text></svg><span class="vp-arrow">↗</span></span></a>
           </div>
-        </div>
-      </div>
-
-      <div class="pcard reveal">
-        <div class="pcard-info">
-          <div class="pcard-tags">STREAMING · KAFKA · SPARK</div>
-          <h3 class="pcard-title">Real-Time Customer 360 Platform</h3>
-          <p class="pcard-desc">Streaming analytics processing 10M+ events/day with sub-5-second latency. Reduced reporting lag from 24 hours to near real-time using Kafka + Flink.</p>
-          <a href="#" class="btn-outline-sm">View Project</a>
-        </div>
-        <div class="pcard-img pcard-img-mint">
-          <div class="pcard-screen">
-            <div class="mini-stream">
-              <div class="mini-event">▶ event_purchase · 12ms</div>
-              <div class="mini-event">▶ event_click · 8ms</div>
-              <div class="mini-event">▶ profile_update · 340ms</div>
-              <div class="mini-event">▶ segment_assign · 4.1s</div>
-            </div>
-            <div class="mini-label">10M+ events/day · &lt;5s latency</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="pcard reveal">
-        <div class="pcard-info">
-          <div class="pcard-tags">COST OPTIMISATION · AWS · SPARK</div>
-          <h3 class="pcard-title">Cloud Cost Optimisation Initiative</h3>
-          <p class="pcard-desc">Auto-scaling Spark clusters and intelligent data lifecycle policies delivering $2M+ annual cloud savings. Compute costs cut 35% in under 6 months.</p>
-          <a href="#" class="btn-outline-sm">View Project</a>
-        </div>
-        <div class="pcard-img pcard-img-yellow">
-          <div class="pcard-screen">
-            <div class="mini-saving">
-              <div class="mini-saving-num">$2M+</div>
-              <div class="mini-saving-lbl">Annual savings</div>
-              <div class="mini-saving-pill">↓ 35% compute cost</div>
+          <div class="pcard-img pcard-img-lavender">
+            <div class="pcard-screen">
+              <div class="mini-dash">
+                <div class="mini-dash-bar" style="--h:55%"></div>
+                <div class="mini-dash-bar" style="--h:80%"></div>
+                <div class="mini-dash-bar" style="--h:45%"></div>
+                <div class="mini-dash-bar" style="--h:90%"></div>
+                <div class="mini-dash-bar" style="--h:65%"></div>
+                <div class="mini-dash-bar" style="--h:75%"></div>
+              </div>
+              <div class="mini-label">50TB+ migrated · 40% faster queries</div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="pcard reveal">
-        <div class="pcard-info">
-          <div class="pcard-tags">GOVERNANCE · GREAT EXPECTATIONS · SOX</div>
-          <h3 class="pcard-title">Data Quality &amp; Governance Framework</h3>
-          <p class="pcard-desc">Enterprise-wide data quality platform using Great Expectations. Reduced critical defects by 70%, enabled SOX compliance and regulatory reporting across 12 domains.</p>
-          <a href="#" class="btn-outline-sm">View Project</a>
+      <div class="pcard-wrap">
+        <div class="pcard reveal">
+          <div class="pcard-info">
+            <div class="pcard-tags">STREAMING · KAFKA · SPARK</div>
+            <h3 class="pcard-title">Real-Time Customer 360 Platform</h3>
+            <p class="pcard-desc">Streaming analytics processing 10M+ events/day with sub-5-second latency. Reduced reporting lag from 24 hours to near real-time using Kafka + Flink.</p>
+            <a href="#" class="btn-vp">View Project<span class="vp-ring" aria-hidden="true"><svg class="vp-ring-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><defs><path id="arc2" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1-92,0"/></defs><text fill="white" font-size="10" font-weight="700" letter-spacing="2.5" font-family="Inter,sans-serif"><textPath href="#arc2">VIEW MORE · VIEW MORE · </textPath></text></svg><span class="vp-arrow">↗</span></span></a>
+          </div>
+          <div class="pcard-img pcard-img-mint">
+            <div class="pcard-screen">
+              <div class="mini-stream">
+                <div class="mini-event">▶ event_purchase · 12ms</div>
+                <div class="mini-event">▶ event_click · 8ms</div>
+                <div class="mini-event">▶ profile_update · 340ms</div>
+                <div class="mini-event">▶ segment_assign · 4.1s</div>
+              </div>
+              <div class="mini-label">10M+ events/day · &lt;5s latency</div>
+            </div>
+          </div>
         </div>
-        <div class="pcard-img pcard-img-pink">
-          <div class="pcard-screen">
-            <div class="mini-checks">
-              <div class="mini-check">✓ Schema validation</div>
-              <div class="mini-check">✓ Null checks passed</div>
-              <div class="mini-check">✓ Referential integrity</div>
-              <div class="mini-check">✓ SOX compliant</div>
+      </div>
+
+      <div class="pcard-wrap">
+        <div class="pcard reveal">
+          <div class="pcard-info">
+            <div class="pcard-tags">COST OPTIMISATION · AWS · SPARK</div>
+            <h3 class="pcard-title">Cloud Cost Optimisation Initiative</h3>
+            <p class="pcard-desc">Auto-scaling Spark clusters and intelligent data lifecycle policies delivering $2M+ annual cloud savings. Compute costs cut 35% in under 6 months.</p>
+            <a href="#" class="btn-vp">View Project<span class="vp-ring" aria-hidden="true"><svg class="vp-ring-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><defs><path id="arc3" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1-92,0"/></defs><text fill="white" font-size="10" font-weight="700" letter-spacing="2.5" font-family="Inter,sans-serif"><textPath href="#arc3">VIEW MORE · VIEW MORE · </textPath></text></svg><span class="vp-arrow">↗</span></span></a>
+          </div>
+          <div class="pcard-img pcard-img-yellow">
+            <div class="pcard-screen">
+              <div class="mini-saving">
+                <div class="mini-saving-num">$2M+</div>
+                <div class="mini-saving-lbl">Annual savings</div>
+                <div class="mini-saving-pill">↓ 35% compute cost</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pcard-wrap">
+        <div class="pcard reveal">
+          <div class="pcard-info">
+            <div class="pcard-tags">GOVERNANCE · GREAT EXPECTATIONS · SOX</div>
+            <h3 class="pcard-title">Data Quality &amp; Governance Framework</h3>
+            <p class="pcard-desc">Enterprise-wide data quality platform using Great Expectations. Reduced critical defects by 70%, enabled SOX compliance and regulatory reporting across 12 domains.</p>
+            <a href="#" class="btn-vp">View Project<span class="vp-ring" aria-hidden="true"><svg class="vp-ring-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><defs><path id="arc4" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1-92,0"/></defs><text fill="white" font-size="10" font-weight="700" letter-spacing="2.5" font-family="Inter,sans-serif"><textPath href="#arc4">VIEW MORE · VIEW MORE · </textPath></text></svg><span class="vp-arrow">↗</span></span></a>
+          </div>
+          <div class="pcard-img pcard-img-pink">
+            <div class="pcard-screen">
+              <div class="mini-checks">
+                <div class="mini-check">✓ Schema validation</div>
+                <div class="mini-check">✓ Null checks passed</div>
+                <div class="mini-check">✓ Referential integrity</div>
+                <div class="mini-check">✓ SOX compliant</div>
+              </div>
             </div>
           </div>
         </div>
@@ -258,45 +287,53 @@
         <a href="#contact" class="btn-outline-sm">Learn More</a>
       </div>
       <div class="process-right">
-        <div class="pstep pstep-peach reveal">
-          <div class="pstep-top">
-            <div class="pstep-icon">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="3" y="5" width="30" height="26" rx="3" stroke="#1d1d1d" stroke-width="1.5"/><path d="M3 13h30M11 20h6M11 25h10" stroke="#1d1d1d" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <div class="pstep-wrap">
+          <div class="pstep pstep-peach reveal">
+            <div class="pstep-top">
+              <div class="pstep-icon">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="3" y="5" width="30" height="26" rx="3" stroke="#1d1d1d" stroke-width="1.5"/><path d="M3 13h30M11 20h6M11 25h10" stroke="#1d1d1d" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <span class="pstep-num">(01)</span>
             </div>
-            <span class="pstep-num">(01)</span>
+            <h4>Discover &amp; Assess</h4>
+            <p>Audit existing data landscape, identify pain points, map stakeholder needs and define success metrics.</p>
           </div>
-          <h4>Discover &amp; Assess</h4>
-          <p>Audit existing data landscape, identify pain points, map stakeholder needs and define success metrics.</p>
         </div>
-        <div class="pstep pstep-mint reveal">
-          <div class="pstep-top">
-            <div class="pstep-icon">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="13" stroke="#1d1d1d" stroke-width="1.5"/><path d="M12 18 Q15 10 18 18 Q21 26 24 18" stroke="#1d1d1d" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+        <div class="pstep-wrap">
+          <div class="pstep pstep-mint reveal">
+            <div class="pstep-top">
+              <div class="pstep-icon">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="13" stroke="#1d1d1d" stroke-width="1.5"/><path d="M12 18 Q15 10 18 18 Q21 26 24 18" stroke="#1d1d1d" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+              </div>
+              <span class="pstep-num">(02)</span>
             </div>
-            <span class="pstep-num">(02)</span>
+            <h4>Design Architecture</h4>
+            <p>Blueprint the data model, pipeline topology, and storage strategy. Choose the right tools for scale and budget.</p>
           </div>
-          <h4>Design Architecture</h4>
-          <p>Blueprint the data model, pipeline topology, and storage strategy. Choose the right tools for scale and budget.</p>
         </div>
-        <div class="pstep pstep-yellow reveal">
-          <div class="pstep-top">
-            <div class="pstep-icon">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><path d="M6 28 L14 18 L20 22 L26 12 L32 28 Z" stroke="#1d1d1d" stroke-width="1.5" fill="none" stroke-linejoin="round"/><circle cx="14" cy="18" r="2" fill="#1d1d1d"/><circle cx="20" cy="22" r="2" fill="#1d1d1d"/></svg>
+        <div class="pstep-wrap">
+          <div class="pstep pstep-yellow reveal">
+            <div class="pstep-top">
+              <div class="pstep-icon">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><path d="M6 28 L14 18 L20 22 L26 12 L32 28 Z" stroke="#1d1d1d" stroke-width="1.5" fill="none" stroke-linejoin="round"/><circle cx="14" cy="18" r="2" fill="#1d1d1d"/><circle cx="20" cy="22" r="2" fill="#1d1d1d"/></svg>
+              </div>
+              <span class="pstep-num">(03)</span>
             </div>
-            <span class="pstep-num">(03)</span>
+            <h4>Build &amp; Validate</h4>
+            <p>Engineer robust pipelines with built-in data quality checks, monitoring, and CI/CD from day one.</p>
           </div>
-          <h4>Build &amp; Validate</h4>
-          <p>Engineer robust pipelines with built-in data quality checks, monitoring, and CI/CD from day one.</p>
         </div>
-        <div class="pstep pstep-lavender reveal">
-          <div class="pstep-top">
-            <div class="pstep-icon">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="13" stroke="#1d1d1d" stroke-width="1.5"/><path d="M13 18l4 4 8-8" stroke="#1d1d1d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="pstep-wrap">
+          <div class="pstep pstep-lavender reveal">
+            <div class="pstep-top">
+              <div class="pstep-icon">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="13" stroke="#1d1d1d" stroke-width="1.5"/><path d="M13 18l4 4 8-8" stroke="#1d1d1d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="pstep-num">(04)</span>
             </div>
-            <span class="pstep-num">(04)</span>
+            <h4>Polish the Outcome</h4>
+            <p>Tune performance, reduce cloud spend, and iterate with the team to ensure the platform meets high standards of quality.</p>
           </div>
-          <h4>Polish the Outcome</h4>
-          <p>Tune performance, reduce cloud spend, and iterate with the team to ensure the platform meets high standards of quality.</p>
         </div>
       </div>
     </div>
