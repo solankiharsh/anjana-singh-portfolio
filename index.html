@@ -11,6 +11,8 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
 
 <!-- HERO (lavender bg wraps nav + hero) -->
 <div class="hero-wrap">
@@ -373,9 +375,15 @@
 
       <div class="about-left reveal">
         <div class="about-img-wrap">
-          <div class="about-blob"></div>
-          <img src="assets/anjana.jpg" alt="Anjana Singh" class="about-photo" id="aboutPhoto">
-          <div class="about-photo-fb" id="aboutFb">AS</div>
+          <svg class="about-blob-svg" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <path id="blobPath" d="M100.909.5h398.182C554.549.5 599.5 45.052 599.5 100s-44.951 99.5-100.409 99.5v1c55.458 0 100.409 44.552 100.409 99.5s-44.951 99.5-100.409 99.5v1c55.458 0 100.409 44.552 100.409 99.5s-44.951 99.5-100.409 99.5H100.909C45.45 599.5.5 554.948.5 500s44.95-99.5 100.409-99.5v-1l-1.298-.008C44.751 398.804.5 354.519.5 300c0-54.948 44.95-99.5 100.409-99.5v-1l-1.298-.008C44.751 198.804.5 154.519.5 100 .5 45.052 45.45.5 100.909.5Z"/>
+              <clipPath id="blobClip"><use href="#blobPath"/></clipPath>
+            </defs>
+            <use href="#blobPath" fill="#fde9a0" class="blob-bg"/>
+            <image href="assets/anjana-1.png" x="0" y="-50" width="600" height="760" preserveAspectRatio="xMidYMin slice" clip-path="url(#blobClip)"/>
+            <use href="#blobPath" fill="none" stroke="#1d1d1d" stroke-width="3"/>
+          </svg>
           <div class="about-badge">
             <svg class="badge-svg" viewBox="0 0 120 120">
               <defs>

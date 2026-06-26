@@ -119,3 +119,37 @@ const capsIO = new IntersectionObserver(
 );
 const capsRow = document.querySelector('.caps-row');
 if (capsRow) capsIO.observe(capsRow);
+
+
+// custom cursor — Meeko-style dot + easing ring
+const cursorDot = document.querySelector('.cursor-dot');
+const cursorRing = document.querySelector('.cursor-ring');
+if (cursorDot && cursorRing && matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  let x = innerWidth / 2, y = innerHeight / 2;
+  let rx = x, ry = y;
+
+  const moveCursor = e => {
+    x = e.clientX; y = e.clientY;
+    cursorDot.classList.add('visible');
+    cursorRing.classList.add('visible');
+    cursorDot.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+  };
+
+  const tick = () => {
+    rx += (x - rx) * 0.18;
+    ry += (y - ry) * 0.18;
+    cursorRing.style.transform = `translate(${rx}px, ${ry}px) translate(-50%, -50%)`;
+    requestAnimationFrame(tick);
+  };
+
+  addEventListener('pointermove', moveCursor, { passive: true });
+  addEventListener('pointerleave', () => {
+    cursorDot.classList.remove('visible');
+    cursorRing.classList.remove('visible');
+  });
+  document.querySelectorAll('a, button, .cap-tag, .pcard, .icard').forEach(el => {
+    el.addEventListener('pointerenter', () => cursorRing.classList.add('hover'));
+    el.addEventListener('pointerleave', () => cursorRing.classList.remove('hover'));
+  });
+  tick();
+}
