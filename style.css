@@ -416,23 +416,6 @@ a  { text-decoration: none; color: inherit; }
 }
 
 /* =====================================================
-   TESTIMONIAL
-===================================================== */
-.testimonial { padding: 80px 0; background: var(--white); }
-.testimonial-inner {
-  max-width: 720px; margin: 0 auto; text-align: center;
-  display: flex; flex-direction: column; gap: 24px; align-items: center;
-}
-.quote-marks { font-size: 40px; color: var(--yellow); letter-spacing: -8px; line-height: 1; }
-.testimonial-inner blockquote {
-  font-size: clamp(16px, 1.8vw, 21px);
-  font-weight: 500; line-height: 1.65; color: var(--ink);
-}
-.testimonial-attr { display: flex; flex-direction: column; gap: 4px; }
-.testimonial-attr strong { font-size: 16px; font-weight: 700; }
-.testimonial-attr span  { font-size: 14px; color: #888; }
-
-/* =====================================================
    PROCESS
 ===================================================== */
 .process { background: var(--lavender); padding: 80px 0; }
